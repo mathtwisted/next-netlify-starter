@@ -1,23 +1,13 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
-    </div>
-  )
+/**
+ * Function that returns a message saying "Coming soon" and provides a link.
+ *
+ * @returns {string} A message saying "Coming soon" and a link.
+ */
+function comingSoon() {
+    const message = "The GSRP is coming soon";
+    const link = "https://discord.gg/ZEbQaJ6Gxr";
+    return `${message} - Check out our discord: ${link}`;
 }
+
+// Usage Example
+console.log(comingSoon());
