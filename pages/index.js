@@ -1,13 +1,23 @@
-/**
- * Function that returns a message saying "Coming soon" and provides a link.
- *
- * @returns {string} A message saying "Coming soon" and a link.
- */
-function comingSoon() {
-    const message = "The GSRP is coming soon";
-    const link = "https://discord.gg/ZEbQaJ6Gxr";
-    return `${message} - Check out our discord: ${link}`;
-}
+import Head from 'next/head'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
 
-// Usage Example
-console.log(comingSoon());
+export default function Home() {
+  return (
+    <div className="container">
+      <Head>
+        <title>Next.js Starter!</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        <Header title="Welcome to the GSR website!" />
+        <p className="description">
+          This website is still in the making. In the meanwhile, join our discord! https://discord.gg/ZEbQaJ6Gxr
+        </p>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}
